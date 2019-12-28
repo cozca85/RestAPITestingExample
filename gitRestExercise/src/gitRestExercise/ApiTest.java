@@ -30,7 +30,7 @@ public class ApiTest {
 	public void testGetWeatherStatusCode200() {
 		RestAssured.baseURI = "https://restapi.demoqa.com/utilities/weather/city";
 		RequestSpecification httpRequest = RestAssured.given();
-		Response response = httpRequest.request(Method.GET, "/Nice");
+		Response response = httpRequest.request(Method.GET, "/CityName");
 		String responseBody = response.getBody().asString();
 		System.out.println("Response Body is : " + responseBody);
 		System.out.println("Response Code is: " + response.getStatusCode());
